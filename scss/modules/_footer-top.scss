@@ -1,0 +1,176 @@
+.footer {
+    .wrapper {
+        max-width: 1220px;
+    }
+}
+///////////// FOOTER TOP
+.footer-top {
+    padding-top: 60px;
+    padding-bottom: 56px;
+}
+.footer-lists {
+    padding-bottom: 55px;
+    font-size: 0;
+}
+.fdiv {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+.list-title {
+    padding-bottom: 22px;
+    display: block;
+    color: $don-juan;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+.footer-li-item {
+    padding: 6px 0;
+    display: block;
+}
+.footer-link {
+    color: $dove-gray;
+    transition: 0.3s;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    text-decoration: none;
+    &:hover {
+        color: $egg-blue;
+        transition: 0.3s;
+    }
+}
+.footer-adress {
+    padding-bottom: 20px;
+    width: 91%;
+    color: $dove-gray;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+}
+.footer-phone {
+    padding-bottom: 10px;
+}
+.footer-phone, .footer-email {
+    color: $don-juan;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+}
+.footer-phone-link, .footer-email-link {
+    text-decoration: none;
+    color: $don-juan;
+    transition: 0.3s;
+    &:hover {
+        color: $egg-blue;
+        transition: 0.3s;
+    }
+}
+//////////////// BANNERS
+.footer-banners {
+    font-size: 0;
+    @extend %clearfix;
+}
+.award-banner {
+    float: left;
+    padding: 52px 0px;
+    background-color: $mine-shaft;
+    display: inline-block;
+    vertical-align: middle;
+    width: 48%;
+}
+.social-banner {
+    position: relative;
+    float: right;
+    padding: 84px 0px;
+    background-color: $egg-blue;
+    display: inline-block;
+    vertical-align: middle;
+    width: 48%;
+}
+.award-text {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    .award-span {
+        font-weight: 600;
+    }
+}
+.social-banner-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+.social-li {
+    padding: 0 27px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.social-link {
+    display: inline-block;
+    opacity: 1;
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+    svg {
+        height: 32px;
+        fill: $white;
+    }
+}
+
+@include breakpoint(tablet) {
+    .footer-lists {
+        text-align: center;
+    }
+    .fdiv {
+        width: 25%;
+    }
+    .contact {
+        padding-top: 15px;
+    }
+    .award-banner, .social-banner {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .social-banner {
+        margin-top: 20px;
+    }
+}
+@include breakpoint(phone) {
+    .footer-lists {
+        text-align: center;
+    }
+    .fdiv {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    .award-banner, .social-banner {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .social-banner {
+        margin-top: 20px;
+    }
+    .social-li {
+        width: 50%;
+        padding: 20px;
+    }
+}

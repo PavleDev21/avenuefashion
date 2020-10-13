@@ -1,0 +1,77 @@
+.lookbook {
+    font-size: 0;
+    padding: 60px 0 124px 0;
+}
+.lb-item {
+    padding: 0 20px;
+    min-height: 200px;
+    text-align: right;
+    @extend %bc-img;
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: middle;
+}
+.lb-wrap {
+    padding: 91px 28px 140px 0;
+    height: 100%;
+    width: 100%;
+}
+.lb-title {
+    padding-bottom: 15px;
+    color: $don-juan;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 55px;
+    font-weight: 300;
+    .lb-span {
+        display: block;
+        font-weight: 700;
+    }
+}
+.lb-text {
+    padding-bottom: 27px;
+    width: 55%;
+    margin-left: 45%;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.lb-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: $abbey;
+    border: 1px solid $abbey;
+    background-color: transparent;
+    transition: 0.3s;
+    padding: 19px 30px;
+    font-size: 16px;
+    letter-spacing: 3.5px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:hover {
+        border: 1px solid $egg-blue;
+        background-color: $egg-blue;
+        color: $white;
+        transition: 0.3s;
+    }
+}
+
+@include breakpoint(tablet) {
+    .lb-item {
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+    }
+}
+@include breakpoint(phone) {
+    .lb-item {
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+    }
+    .lb-wrap {
+        padding: 38px 0px;
+    }
+}

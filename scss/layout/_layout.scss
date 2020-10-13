@@ -1,0 +1,8 @@
+.body {
+    padding-top: 45px;
+    font-family: $font;
+    font-weight: 400;
+}
+.bc-wrap {
+    @extend %bc-img;
+}

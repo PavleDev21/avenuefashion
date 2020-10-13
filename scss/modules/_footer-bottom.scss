@@ -1,0 +1,52 @@
+.footer-bottom {
+    padding: 13px 0;
+    background-color: $mine-shaft;
+}
+.copyright {
+    @extend %clearfix;
+}
+.copyright-span {
+    color: $dusty-gray;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.developer {
+    padding-left: 35px;
+}
+.developer, .designer {
+    color: $boulder;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.developer-link, .designer-link {
+    text-decoration: none;
+    color: $boulder;
+    transition: 0.3s;
+    &:hover {
+        color: $egg-blue;
+        transition: 0.3s;
+    }
+}
+
+
+@include breakpoint(phone) {
+    .copyright {
+        text-align: center;
+    }
+    .developer {
+        padding-left: 0;
+    }
+    .copyright-span,
+    .designer,
+    .developer {
+        display: block;
+        float: none;
+        padding-bottom: 5px;
+    }
+}

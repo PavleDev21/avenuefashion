@@ -1,0 +1,241 @@
+.items {
+    .wrapper {
+        max-width: 1628px;
+        padding: 51px 20px;
+        border-top: 1px solid rgba($dove-gray, 0.2);
+        border-bottom: 1px solid rgba($dove-gray, 0.2);
+        font-size: 0;
+    }
+}
+.items-list {
+    margin-bottom: 43px;
+    display: block;
+}
+.items-list {
+    margin-left: -28px;
+    font-size: 0;
+}
+.item-list-item {
+    padding: 0 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.items-list-link {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    color: $dove-gray;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        color: $egg-blue;
+        transition: 0.3s;
+    }
+}
+.tab-open {
+    color: $egg-blue;
+}
+.item-section {
+    display: inline-block;
+    width: 50%;
+    font-size: 0;
+}
+.item {
+    display: inline-block;
+    width: 50%;
+}
+.item-wrap {
+    padding: 15px;
+}
+.item-big {
+    width: 100%;
+}
+.item-img {
+    position: relative;
+    padding-bottom: 122%;
+    &:hover {
+        .overlay-big {
+            display: block;
+        }
+    }
+}
+.item-img-src {
+    @extend %bc-img;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 128px;
+    }
+}
+.overlay-big {
+    display: none;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.item-mini-images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    background-color: transparent;
+}
+.mini-img {
+    margin: 15px;
+    position: relative;
+    padding-bottom: 87%;
+}
+.mini-img-src {
+    @extend %bc-img;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.item-text {
+    z-index: 40;
+    padding-top: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $white;
+}
+.show-overlay {
+    display: block;
+}
+.item-title {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $don-juan;
+}
+.item-subtitle {
+    padding-bottom: 15px;
+    width: 85%;
+    margin: 0 auto;
+    color: $don-juan;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: $font2;
+}
+.item-link {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+    svg {
+        height: 40px;
+        fill: $white;
+    }
+}
+.item-icons {
+    padding-bottom: 15px;
+    font-size: 0;
+}
+.item-btn {
+    position: relative;
+    margin: 0 7px;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    background-color: $dove-gray;
+    transition: 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        background-color: $egg-blue;
+        transition: 0.3s;
+    }
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 15px;
+        fill: $white;
+    }
+}
+.item-price {
+    z-index: 30;
+    color: $dusty-gray;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 300;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    .strike-price {
+        text-decoration: line-through;
+        padding-right: 15px;
+    }
+    .small-pound {
+        font-size: 10px;
+        position: absolute;
+        top: -3px;
+        left: -7px;
+    }
+    .small-pound-sale {
+        left: 42px;
+    }
+}
+
+@include breakpoint(tablet) {
+    .items-list {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .item-list-item {
+        padding: 0 15px;
+    }
+    .item-section {
+        display: block;
+        width: 100%;
+    }
+}
+@include breakpoint(phone) {
+    .items-list {
+        text-align: center;
+    }
+    .item-list-item {
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    .item-section {
+        display: block;
+        width: 100%;
+    }
+    .item {
+        display: block;
+        width: 100%;
+    }
+}
