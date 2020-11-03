@@ -1,6 +1,8 @@
 $navLink = $('.nav-link');
+$navItem = $('.nav-item');
 $arrow = $('.nav-arrow');
-$header = $('.header')
+$header = $('.header');
+$logo = $('.logo-img');
 
 $(function() {
 	$('.match').matchHeight();
@@ -16,15 +18,29 @@ function navToggle() {
     })
 }
 
+function subHover() {
+    if ($(window).width() > 1024) {
+        $navItem.addClass('sub-nav-toggle');
+     }
+     else {
+        $navItem.removeClass('sub-nav-toggle');
+     }
+}
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-       $header.addClass('color-change');
-    } 
-    if ($(this).scrollTop() < 50) {
-       $header.removeClass('color-change');
-    } 
-});
+function animateHeader() {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+           $header.addClass('color-change');
+           $header.addClass('header-padding');
+           $logo.addClass('logo-padding');
+        } 
+        if ($(this).scrollTop() < 50) {
+           $header.removeClass('color-change');
+           $header.removeClass('header-padding');
+           $logo.removeClass('logo-padding');
+        } 
+    });
+}
 
 
 function show() {
@@ -58,7 +74,7 @@ function nav() {
 
 	$navLink.on('click', function() {
 		var index = $(this).data('scrollsec-index');
-        var sectionOffset = $('.main-js-section[data-scrollsec-index="'+ index + '"]').offset().top - 90;
+        var sectionOffset = $('.main-js-section[data-scrollsec-index="'+ index + '"]').offset().top - 75;
         $('html,body').stop().animate({scrollTop: sectionOffset}, 900);
         $navigation.toggleClass('nav-show');
         $icon.toggleClass('nav-toggle-active');
@@ -136,6 +152,8 @@ function tabs() {
 
 
 //////////////////////////
+subHover();
+animateHeader();
 navToggle();
 show();
 nav();

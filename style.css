@@ -767,6 +767,7 @@ table {
   padding: 41px 0 25px 0;
   z-index: 100;
   width: 100%;
+  transition: 0.3s;
 }
 
 .user-cart {
@@ -878,6 +879,10 @@ table {
   transition: 0.3s;
 }
 
+.logo-img {
+  transition: 0.3s;
+}
+
 .navigation {
   padding-right: 144px;
   float: right;
@@ -970,18 +975,16 @@ table {
   display: inline-block;
 }
 
-.nav-item:hover {
-  /*.sub-nav {
-            display: block;
-        }*/
-}
-
 .nav-item:hover .nav-arrow {
   fill: #00c8c8;
 }
 
 .nav-item:hover .nav-link {
   color: #00c8c8;
+}
+
+.sub-nav-toggle:hover .sub-nav {
+  display: block;
 }
 
 .nav-arrow {
@@ -1018,7 +1021,7 @@ table {
   position: relative;
   height: 40px;
   width: 40px;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .nav-toggle-icon {
@@ -1055,6 +1058,15 @@ table {
 
 .color-change {
   background-color: #fff;
+  transition: 0.3s;
+}
+
+.logo-padding {
+  padding-top: 10px;
+}
+
+.header-padding {
+  padding: 18px 0 0 0;
   transition: 0.3s;
 }
 
@@ -1155,9 +1167,29 @@ table {
     padding-right: 72px;
     padding-top: 20px;
   }
+  .header-padding {
+    padding: 18px 0 8px 0;
+  }
+  .logo-padding {
+    padding-top: 5px;
+  }
 }
 
 @media only screen and (min-width: 120px) and (max-width: 767px) {
+  .nav-toggle-active {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+  .nav-toggle-active::after {
+    transform: rotate(45deg);
+    top: 0;
+    transition: 0.5s;
+  }
+  .nav-toggle-active::before {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: 0.5s;
+  }
   .sign-in, .register {
     margin: 0;
   }
@@ -1251,6 +1283,12 @@ table {
   .sub-list {
     padding-right: 72px;
     padding-top: 20px;
+  }
+  .header-padding {
+    padding: 18px 0 8px 0;
+  }
+  .logo-padding {
+    padding-top: 5px;
   }
 }
 
